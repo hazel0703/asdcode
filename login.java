@@ -1,50 +1,50 @@
 /*****************************************************/
-/* Class implementation login
-/*
+/* Class implementation Login
+/* Creator: Adriana Devera
+/* Modified by: 
 /******************************************************/
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+/*Libraries*/
+
 import java.util.Scanner;
 
-/*The following libraries are needed in this file, and i do not know how to declare them*/
-//import user;
+/*Class Login*/
 
-public class Login{
+public class Login {
 
-	String email;
-	String password;
+public static void main(String[] args) {
 
-	public Integer signIn(email, password){
+    String Email;
+    String Password;
 
-	}
+/*Static variables to test the inputs*/
+    Email = "group11asd@gmail.com";
+    Password = "123456*";
 
+/*Inputs*/
+    Scanner input1 = new Scanner(System.in);
+    System.out.println("Enter Username : ");
+    String username = input1.next();
 
-	public Boolean signOut(email, password){
+    Scanner input2 = new Scanner(System.in);
+    System.out.println("Enter Password : ");
+    String password = input2.next();
 
-	}
+    if (username.equals(Email) && password.equals(Password)) {
 
-
-	public static void main(String[] args) 
-    {
-
-	System.out.println("Welcome to your Social Care Site!");
-    System.out.println("\nEnter your username and password to login to your account.");    
-
-    System.out.println("Username: ");
-        username = input.nextLine();
-
-    System.out.println("Password: ");
-        password = input.nextLine();
-
-        User login = new UserAccount(email, password);
-
-        if(login.checkPassword())
-            System.out.println("You are logged in!");
-        else
-            System.out.println("The username and password you entered are incorrect.");
+        System.out.println("Access Granted! Welcome to the social care system!");
     }
+
+    else if (username.equals(Email)) {
+        System.out.println("Invalid Password!");
+    } else if (password.equals(Password)) {
+        System.out.println("Invalid Username!");
+    } else {
+        System.out.println("Invalid Username & Password!");
+    }
+
+}
 
 
 }
+
